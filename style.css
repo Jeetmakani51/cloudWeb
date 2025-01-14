@@ -1,0 +1,530 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+.container1 {
+    position : relative;
+    margin-left : 20vh;
+    overflow: hidden;
+}
+.container2 {
+    position : relative;
+    margin-left : 135vh;
+}
+.container3 {
+    position : relative;
+    margin-left : 120vh;
+    margin-top : 40vh;
+}
+.container4 {
+    position : relative;
+    margin-top : -20vh;
+}
+
+.cloud1{
+    background: white;
+    height: 50px;
+    width : 30vh;
+    margin-left: 40px;
+    margin-top : 60px;
+    position : relative;
+    border-radius : 50px;
+    animation: moveCloudsLeftToRight 25s linear infinite;
+}
+
+
+.cloud2 {
+    background: white;
+    height: 50px;
+    width : 30vh;
+    margin-left: 40px;
+    margin-top : 60px;
+    position : relative;
+    border-radius : 50px;
+    animation: moveCloudsRightToLeft 25s linear infinite;
+}
+
+.cloud3 {
+    background: white;
+    height: 50px;
+    width : 30vh;
+    margin-left: 40px;
+    margin-top : 60px;
+    position : relative;
+    border-radius : 50px;
+    animation: moveCloudsRightToLeft 25s linear infinite;
+}
+
+.cloud4 {
+    background: white;
+    height: 50px;
+    width : 30vh;
+    margin-left: 40px;
+    margin-top : 60px;
+    position : relative;
+    border-radius : 50px;
+    animation: moveCloudsLeftToRight 25s linear infinite;
+}
+
+@keyframes moveCloudsLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110vw); /* Moves clouds completely off the screen */
+  }
+}
+
+@keyframes moveCloudsRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-110vw); /* Moves clouds completely off the screen */
+  }
+}
+
+
+.box1,.box2,.box3 {
+    height : 100px;
+    width : 100px;
+    border-radius : 50px;
+    top : -50px;
+    position : absolute;
+    left : 20px;
+    background : white;
+}
+
+.box2 {
+    width : 65px;
+    height : 65px;
+    top : -15px;
+    left : -23px;
+}
+
+.box3 {
+    width : 70px;
+    height : 70px;
+    top : -32px;
+    left : 110px;
+}
+
+.header {
+    background-color: #89b1f0;
+    backdrop-filter: blur(spx);
+    height: 60px;
+}
+
+.jointCloud {
+    background : white;
+    height : 50px;
+    width : 20vh;
+    display : flex;
+    position : absolute;
+    margin-top : 6vh;
+    margin-left : 30vh;
+    border-radius : 50px;
+    animation: moveCloudsRightToLeft 25s linear infinite;
+}
+
+.jointbox1,.jointbox2,.jointbox3 {
+    height : 50px;
+    width : 50px;
+    border-radius : 50px;
+    background: white;
+    position : absolute;
+}
+
+.jointbox2 {
+    height : 65px;
+    width : 65px;
+    top : -30px;
+    left : 20px;
+}
+
+.jointbox3 {
+    height : 70px;
+    width : 70px;
+    top : -22px;
+    left : 60px;
+}
+
+.container5 {
+    position: relative;
+    margin-left: 10vh;
+}
+
+.font {
+    font-family : tangerine,serif;
+    font-size : 48px;
+   display : flex;
+    justify-content : center;
+    margin-top : -50vh;
+}
+ 
+.btn {
+    display: block;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #d4af37;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .cube {
+    position: relative;
+    transition: all 0.5s;
+  }
+  
+  .cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #d4af37;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-top .bg-inner {
+    bottom: 0;
+  }
+  
+  .cube .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-right {
+    position: absolute;
+    background: #d4af37;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-right .bg-inner {
+    left: 0;
+  }
+  
+  .cube .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+  }
+  
+  .cube .text {
+    position: relative;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .bg-inner {
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .bg-right,
+  .cube:hover .bg,
+  .cube:hover .bg-top {
+    background: #28282d;
+  }
+  
+  .cube:active {
+    z-index: 9999;
+    animation: bounce 0.1s linear;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  .button {
+    margin-left : 80vh;
+    margin-top : 30vh;
+  }
+
+  .quote {
+    font-family: quicksand,sans-serif;
+    margin-left : 65vh;
+    position : absolute;
+    margin-top : 10vh;
+  }
+
+  .frame1 {
+    transform : scale(0.7);
+    position : relative;
+    margin-top : 20px;
+    margin-left : -20vh;
+  }
+  
+  .cloudthought {
+    height : 200px;
+    width : 80vh;
+    background: radial-gradient(circle, #ffffff 60%, #e0eaff 100%);
+    position : absolute;
+    border-radius : 100px;
+    margin-left : 40%;
+    margin-top : 20%;
+  }
+  
+  .clbox1,.clbox2,.clbox3,.clbox4 {
+    height : 200px;
+    width : 200px;
+    border-radius : 50px;
+    position : absolute;
+    background: #ffffff;
+  }
+  
+  .clbox1 {
+    height : 250px;
+    width : 250px;
+    border-radius : 50%;
+    top : -30vh;
+    left : 15vh;
+  }
+  
+  .clbox2 {
+    border-radius : 50%;
+    height : 200px;
+    width : 30vh;
+    background: radial-gradient(circle, #ffffff 60%, #e0eaff 100%);
+    top : 0px;
+    left : -80px;
+  }
+
+.clbox3 {
+  border-radius : 50%;
+  height : 150px;
+  width : 150px;
+  top : -13vh;
+  left : 20px;
+}
+
+.clbox4 {
+  border-radius : 50%;
+  height : 150px;
+  width : 150px;
+  top : -13vh;
+  left : 40vh;
+  background: radial-gradient(circle, #ffffff 60%, #e0eaff 100%);
+}
+
+.cloudBed {
+  background: #ffffff;
+  height : 15vh;
+  width : 100%;
+  position : absolute;
+  margin-top : 85vh;
+}
+
+.theCloud {
+   background : white;
+    height : 50px;
+    width : 20vh;
+    display : flex;
+    position : absolute;
+    margin-top : -50px;
+    margin-left : 40px;
+    border-radius : 50px;
+}
+
+.cb1,.cb2,.cb3 {
+    height : 50px;
+    width : 50px;
+    border-radius : 50px;
+    background: white;
+    position : absolute;
+}
+
+.cb2 {
+  height : 65px;
+  width : 65px;
+  top : -30px;
+  left : 20px;
+}
+
+.cb3 {
+  height : 70px;
+  width : 70px;
+  top : -22px;
+  left : 60px;
+}
+
+.bgClouds {
+  background : white;
+    height : 50px;
+    width : 20vh;
+    display : flex;
+    position : absolute;
+    margin-top : 6vh;
+    margin-left : 30vh;
+    border-radius : 50px;
+}
+
+.bgcl1,.bgcl2,.bgcl3 {
+  height : 50px;
+  width : 50px;
+  border-radius : 50px;
+  background: white;
+  position : absolute;
+}
+
+.bgcl2 {
+height : 65px;
+width : 65px;
+top : -30px;
+left : 20px;
+}
+
+.bgcl3 {
+height : 70px;
+width : 70px;
+top : -22px;
+left : 60px;
+}
+
+.bgClouds2 {
+  background : white;
+    height : 50px;
+    width : 20vh;
+    display : flex;
+    position : absolute;
+    margin-top : 6vh;
+    margin-left : 140vh;
+    border-radius : 50px;
+}
+
+.bgcl4,.bgcl5,.bgcl6 {
+  height : 50px;
+  width : 50px;
+  border-radius : 50px;
+  background: white;
+  position : absolute;
+}
+
+.bgcl5 {
+height : 65px;
+width : 65px;
+top : -30px;
+left : 20px;
+}
+
+.bgcl6 {
+height : 70px;
+width : 70px;
+top : -22px;
+left : 60px;
+}
+
+.trunk {
+  background : #f0f8ff;
+  height : 150px;
+  width : 10px;
+  margin-left : 100.2vh;
+  margin-top : 75.5vh;
+  position : absolute;
+}
+
+.leaf1 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 98vh;
+  margin-top : 80vh;
+  position : absolute;
+  transform : rotate(60deg);
+}
+
+.leaf2 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 92vh;
+  margin-top : 80vh;
+  position : absolute;
+  transform : rotate(120deg);
+}
+
+.leaf3 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 98vh;
+  margin-top : 83vh;
+  position : absolute;
+  transform : rotate(60deg);
+}
+
+.leaf4 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 92vh;
+  margin-top : 83vh;
+  position : absolute;
+  transform : rotate(120deg);
+}
+
+.leaf5 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 98vh;
+  margin-top : 86vh;
+  position : absolute;
+  transform : rotate(60deg);
+}
+
+.leaf6 {
+  background : #50c878;
+  height : 5px;
+  width : 90px;
+  margin-left : 92vh;
+  margin-top : 86vh;
+  position : absolute;
+  transform : rotate(120deg);
+}
+
+.tree {
+  position: absolute;
+  margin-left: 30vh;
+}
+
+
+
